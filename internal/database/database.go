@@ -29,12 +29,3 @@ func (d *Database) ConnectDatabase() *sqlx.DB {
 	d.database = db
 	return d.database
 }
-
-func (d *Database) User() {
-	rows, err := d.database.Query("select * from users")
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
-	fmt.Println(rows.Columns())
-
-}

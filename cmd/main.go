@@ -11,10 +11,9 @@ func main() {
 	db := &database.Database{}
 	db.ConnectDatabase()
 
-	db.User()
 	// Регистрация обработчиков
-	s.Handler("/register")
-	s.Handler("/login")
+	s.Handler("/register", db)
+	s.Handler("/login", db)
 
 	// Запуск сервера
 	s.Run()
