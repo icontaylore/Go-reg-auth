@@ -1,7 +1,6 @@
 package database
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 )
@@ -12,6 +11,6 @@ func ExistUser(w http.ResponseWriter, r *http.Request, db *Database) bool {
 	if err != nil {
 		log.Println(err)
 	}
-	fmt.Println(count, r.FormValue("email"))
+
 	return count
 }

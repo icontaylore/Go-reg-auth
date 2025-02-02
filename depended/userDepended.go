@@ -1,7 +1,7 @@
 package depended
 
 type User struct {
-	Id       int `json:"id"`
-	Email    int `json:"email"`
-	Password int `json:"password"`
+	ID       int    `db:"id"`
+	Email    string `db:"email"`
+	Password string `db:"password"`
 }
